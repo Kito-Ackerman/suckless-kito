@@ -1,0 +1,62 @@
+#+TITLE: dmenu-build-kito
+
+* Table of Contents :toc:
+- [[#what-is-dmenu][What is dmenu?]]
+- [[#what-is-dmenu-build-kito][What is dmenu-build-kito]]
+- [[#mouse-functionality][Mouse functionality]]
+- [[#available-flags][Available flags]]
+
+* What is dmenu?
+#+CAPTION: dmenu-distrotube
+#+ATTR_HTML: :alt dmenu-distrotube :title dmenu-distrotube :align left
+
+dmenu is a dynamic menu for X, originally designed for dwm. It manages large numbers of user-defined menu items efficiently.  It is a very powerful tool that allows you to pipe information into it.  This makes dmenu a perfect utility to incorporate into your scripting.
+* What is dmenu-build-kito
+dmenu-distroube is my patched build of dmenu. It is very functional and lightway, so i always use it in my shell scripts.
+The patch i use are:
++ [[https://tools.suckless.org/dmenu/patches/border/][Dmenu-border]].Adds border around dmenu window
++ [[https://tools.suckless.org/dmenu/patches/center/][Dmenu-center]].Allow dmenu to run in a rofi style in the middle of the screen
++ [[https://tools.suckless.org/dmenu/patches/fuzzyhighlight/][Dmenu-fuzzyhighlight]].Fuzzy matches gets highlighted
++ [[https://tools.suckless.org/dmenu/patches/fuzzymatch/][Dmenu-fuzzymatch]].Adds support for fuzzy-matching
++ [[https://tools.suckless.org/dmenu/patches/grid/][Dmenu-grid]]. Allow to choose the number of lines and columns of dmenu
++ [[https://tools.suckless.org/dmenu/patches/line-height/][Dmenu-lineheight]].Allow to choose the minimun height of the line
++ [[https://tools.suckless.org/dmenu/patches/morecolor/][Dmenu-morecolor]]. Creates a color option for use the entries adjacent to the selection
++ [[https://tools.suckless.org/dmenu/patches/mouse-support/][Dmenu-mousesupport]].Enable to use the mouse with dmenu
++ [[https://tools.suckless.org/dmenu/patches/numbers/][Dmenu-numbers]].Displays number of matched and total items in top right corner
+
+* Mouse functionality
+Mouse actions supported:
++ Left-mouse click:
+  - On prompt and input field: clear input text and selection.
+  - In horizontal and vertical mode on item: select and output item (same as pressing enter).
+  - In horizontal mode on arrows: change items to show left or right.
++ Ctrl-left-mouse click: multisel modifier.
++ Right-mouse click: close.
++ Middle-mouse click:
+  - Paste current selection.
+  - While holding shift: paste primary selection.
++ Scroll up:
+  - In horizontal mode: same as left-clicking on left arrow.
+  - In vertical mode: show items above.
++ Scroll down:
+  - In horizontal mode: same as left-clicking on right arrow.
+  - In vertical mode: show items below.
+
+* Available flags
++ [-l lines]
++ [-g columns]
++ [-p prompt]
++ [-fn font]
++ [-m monitor]
++ [-h height]
++ [-w windowid]
++ [-c center view]
++ [-nb color]
++ [-nf color]
++ [-sb color]
++ [-sf color]
++ [-nhb color]
++ [-nhf color]
++ [-shb color]
++ [-shf color]
+
